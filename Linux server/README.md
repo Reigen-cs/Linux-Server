@@ -415,7 +415,12 @@ Run the following command to verify that the configuration is correct:
   3. Enter `smb://[server IP]/share` and click **Connect**.
 
 
-### 9) BACKUP
+### 9) SECURING THE SERVER 
+
+
+### BACKUP
+
+Enable protection for SSH and adjust ban times as needed.
 
 - first we need to add a back up drive on the vm :
 	- In VirtualBox, select the device and go to Settings.
@@ -454,4 +459,84 @@ Run the following command to verify that the configuration is correct:
 >- `0`: Specifies the day of the week when the task should run (in this case, Sunday, where Saturday is represented by 0).
 >- `/root/scripts/backup-conf`: Specifies the command or script that should be executed at the specified time.
    
- 
+ ### FAIL2BAN
+
+Fail2Ban monitors failed login attempts and blocks IPs with multiple failed attempts.
+
+`sudo apt install fail2ban`  
+
+To configure it:
+
+`sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local  
+sudo nano /etc/fail2ban/jail.local`  
+
+Enable protection for SSH and adjust ban times as needed.
+
+ ### AIDE
+
+AIDE (Advanced Intrusion Detection Environment) scans your file system for changes.
+`sudo apt install aide`  
+`sudo aideinit`  
+`sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db`  
+
+To check for changes:
+`sudo aide --check`  
+
+ ###Monitor Logs
+
+ Regularly monitor logs to check for suspicious activity. Use tools like logwatch for easier log summaries.
+
+`sudo apt install logwatch  
+sudo logwatch --detail High --mailto your-email@example.com --range today`  
+
+### TCP Wrappers
+
+tcp_wrappers allows you to control network access to specific services.
+`sudo apt install tcpd`  
+
+Configure access by editing the /etc/hosts.allow and /etc/hosts.deny files.
+`sudo nano /etc/hosts.allow`  
+> sshd: 10.0.2.X  
+
+In /etc/hosts.deny, block other connections:
+`sudo nano /etc/hosts.deny`  
+> sshd: ALL  
+
+### Web Application Firewall
+
+Install ModSecurity for Apache:
+`sudo apt install libapache2-mod-security2`  
+`sudo a2enmod security2`  
+
+Configure ModSecurity rules:
+`sudo nano /etc/modsecurity/modsecurity.conf`  
+
+Enable it and restart Apache:
+`sudo systemctl restart apache2`  
+
+### Encrypt Sensitive Directories
+
+Encrypting directories containing sensitive data adds another layer of protection in case of unauthorized access.
+
+Use ecryptfs-utils for this purpose:
+`sudo apt install ecryptfs-utils`  
+`sudo mount -t ecryptfs /path/to/sensitive-directory /path/to/mount-point`  
+
+### Harden DNS with DNSSec
+
+If your server provides DNS services, enable DNSSEC (DNS Security Extensions) to authenticate DNS queries and responses.
+`sudo nano /etc/bind/named.conf.options`  
+Add the following:
+`dnssec-enable yes;`  
+`dnssec-validation yes;`  
+
+###Enable Logging and Monitoring for Sudo Commands
+
+Track all sudo actions to have an audit trail of privileged commands.
+
+Edit `/etc/sudoers` to enable logging:
+
+`Defaults logfile="/var/log/sudo.log"`  
+
+
+
