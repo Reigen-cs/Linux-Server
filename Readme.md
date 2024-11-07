@@ -29,7 +29,7 @@
 	- I did let oracle chose my network , here it was  **10.0.2.0/24**
 	- Don't check the `Enable DHCP`, we'll do it by ourself
 
-#SCREENSHOT I NEED TO ADD
+# SCREENSHOT I NEED TO ADD
 
 - On both VM put 2 adaptater to begin with : NAT and the private NAT we created, once we finished every config, we'll remove the NAT and use only the private NAT
 
@@ -37,7 +37,7 @@
 
 -Can also work with "private host network" like we did on another machine : 
 
-#SCREENSHOT I NEED TO ADD
+# SCREENSHOT I NEED TO ADD
 
 ## Setup CLIENT device
 
@@ -81,7 +81,7 @@ https://mullvad.net/en/download/browser/linux
 
 To connect from windows :
 
-###Step 1 :
+### Step 1 :
 
 sudo apt update
 sudo apt install xrdp -y
@@ -90,7 +90,7 @@ sudo systemctl enable xrdp
 ip addr show
 sudo ufw allow 3389/tcp   
 
-###Step 2: Connect from Windows
+### Step 2: Connect from Windows
 Now that the Linux machine is set up, connect from Windows.
 
 Open Remote Desktop Connection for RDP:
