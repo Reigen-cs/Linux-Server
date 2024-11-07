@@ -246,8 +246,8 @@ zone "2.0.10.in-addr.arpa" {
 Create a new directory */etc/bind/zones*: `sudo mkdir -p /etc/bind/zones/`
 
 Copy the default **forward** and **reverse** zones:
-- `sudo cp /etc/bind/db.local /etc/bind/zones/forward.kamkar3lib.io`
-- `sudo cp /etc/bind/db.127 /etc/bind/zones/reverse.kamkar3lib.io`
+- `sudo cp /etc/bind/db.local /etc/bind/zones/forward.bookstore.io`
+- `sudo cp /etc/bind/db.127 /etc/bind/zones/reverse.bookstore.io`
 
 Edit the **forward** zone file */etc/bind/zones/forward.bookstore.io*:
 ```
@@ -262,11 +262,11 @@ $TTL    604800
                         2419200       ; Expire
                         604800 )      ; Negative Cache TTL
 
-; Define the default name server to ns1.kamkar3lib.io
+; Define the default name server to ns1.bookstore.io
 @       IN      NS      ns1.bookstore.io.
 ns1     IN      A       10.0.2.10
 
-kamkar3lib.io. IN   MX   10   mail.bookstore.io.
+bookstore.io. IN   MX   10   mail.bookstore.io.
 
 www     IN      A       10.0.2.10
 mail    IN      A       10.0.2.20
