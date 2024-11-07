@@ -356,12 +356,13 @@ Edit the Samba configuration file:
 
 Add a new shared folder configuration at the end of the file. For example, to share the folder /srv/samba/share:
 
-```[share]
-path = /srv/samba/share
+[share]
+
+`path = /srv/samba/share
 browseable = yes
 writable = yes
 guest ok = no
-valid users = @sambashare```
+valid users = @sambashare`
 
 Create the Shared Directory
 
