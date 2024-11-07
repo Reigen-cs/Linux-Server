@@ -530,7 +530,7 @@ Add the following:
 `dnssec-enable yes;`  
 `dnssec-validation yes;`  
 
-###Enable Logging and Monitoring for Sudo Commands
+### Enable Logging and Monitoring for Sudo Commands
 
 Track all sudo actions to have an audit trail of privileged commands.
 
