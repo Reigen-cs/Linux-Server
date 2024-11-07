@@ -170,11 +170,11 @@ You can activate the firewall with `sudo ufw enable` and check its status with `
 
 ### 5) SERVER WEB NGINX
 
-`sudo apt install nginx -y` - Installation
-`sudo systemctl start nginx` - Starting the service 
-`sudo systemctl enable nginx` - Making the service boot when the server boot
-`sudo systemctl status nginx` - Check the status of the service
-`sudo ufw allow 'Nginx Full'` - Enabling it on our firewall
+`sudo apt install nginx -y` - Installation  
+`sudo systemctl start nginx` - Starting the service   
+`sudo systemctl enable nginx` - Making the service boot when the server boot  
+`sudo systemctl status nginx` - Check the status of the service  
+`sudo ufw allow 'Nginx Full'` - Enabling it on our firewall  
 
 Then test it : 
 
@@ -183,13 +183,13 @@ You should see the NGINX default welcome page, confirming it's working.
 
 To configure it :
 
-Configuration files for NGINX are stored in `/etc/nginx/.`
-The main configuration file is `/etc/nginx/nginx.conf.`
-You can create custom configuration files in `/etc/nginx/sites-available/` and enable them by linking them to `/etc/nginx/sites-enabled/.`
+Configuration files for NGINX are stored in `/etc/nginx/.`  
+The main configuration file is `/etc/nginx/nginx.conf.`  
+You can create custom configuration files in `/etc/nginx/sites-available/` and enable them by linking them to `/etc/nginx/sites-enabled/.`  
 
-Whenever you do a configuration change restart the service
+Whenever you do a configuration change restart the service :
 
-`sudo systemctl restart nginx`
+`sudo systemctl restart nginx`  
 
 ### 6) DNS
 
@@ -293,27 +293,27 @@ ns1     IN      A       10.0.2.10
 ```
 
 Check the BIND configurations by running the following commands:
-- `sudo named-checkconf`
-- `sudo named-checkzone bookstore.io /etc/bind/zones/forward.bookstore.io`
-- `sudo named-checkzone bookstore.io /etc/bind/zones/reverse.bookstore.io`
+- `sudo named-checkconf`  
+- `sudo named-checkzone bookstore.io /etc/bind/zones/forward.bookstore.io`  
+- `sudo named-checkzone bookstore.io /etc/bind/zones/reverse.bookstore.io`  
 
 Restart and verify the *named* service with the `systemctl` command:
-- `sudo systemctl restart named`
-- `sudo systemctl status named`
+- `sudo systemctl restart named`  
+- `sudo systemctl status named`  
 
 ### Opening DNS port with UFW Firewall
-- `sudo ufw allow Bind9`
-- `sudo ufw status`
+- `sudo ufw allow Bind9`  
+- `sudo ufw status`  
 
 ### Verify BIND DNS Server Installation
-- `dig @10.0.2.10 www.bookstore.io`
-- `dig @10.0.2.10 mail.bookstore.io`
-- `dig @10.0.2.10 vault.bookstore.io`
+- `dig @10.0.2.10 www.bookstore.io`  
+- `dig @10.0.2.10 mail.bookstore.io`  
+- `dig @10.0.2.10 vault.bookstore.io`  
 
-- `dig @10.0.2.10 bookstore.io MX`
+- `dig @10.0.2.10 bookstore.io MX`  
 
-- `dig @10.0.2.10 -x 10.0.2.10`
-- `dig @10.0.2.10 -x 10.0.2.20`
+- `dig @10.0.2.10 -x 10.0.2.10`  
+- `dig @10.0.2.10 -x 10.0.2.20`  
 
 
 ### 7) DHCP
