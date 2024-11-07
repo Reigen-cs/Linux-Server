@@ -4,11 +4,17 @@
 - [Creates VM](#creates-vm)
 - [Setup CLIENT device](#setup-client-device)
 - [Setup SERVER device](#setup-server-device)
-  - [SERVER WEB NGINX](##server-web-nginx)
-  - [DNS](#dns)
-  - [DHCP](#dhcp)
-  - [SAMBA](#samba)
-  - [SECURING THE SERVER](#securing-the-server)
+  - [1) Create a new user for administration](#1-create-a-new-user-for-administration)
+  - [2) Setup a static IP](#2-setup-a-static-ip)
+  - [3) Firewall](#3-install-a-firewall)
+  - [4) Check SSH](#4-check-ssh)
+  - [5) Server Web Nginx](#5-server-web-nginx)
+  - [6) DNS](#6-dns)
+  - [7) DHCP](#7-dhcp)
+  - [8) SAMBA](#8-samba)
+  - [9) Security ](#9-security)
+
+
 
 ## Creates VM
 
@@ -424,7 +430,7 @@ Run the following command to verify that the configuration is correct:
   3. Enter `smb://[server IP]/share` and click **Connect**.
 
 
-### 9) SECURING THE SERVER 
+### 9) Security
 
 
 ### BACKUP
