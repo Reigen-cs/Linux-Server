@@ -83,26 +83,22 @@ To connect from windows :
 
 ### Step 1 :
 
-sudo apt update
-sudo apt install xrdp -y
-sudo systemctl start xrdp
-sudo systemctl enable xrdp
-ip addr show
-sudo ufw allow 3389/tcp   
+`sudo apt install xrdp -y`  - Install the package
+`sudo systemctl start xrdp`  - Start the service
+`sudo systemctl enable xrdp`  - Make it boot when the server boot
+`ip addr show`  - To see our ip
+`sudo ufw allow 3389/tcp` - Allowing this service in our UFW
 
 ### Step 2: Connect from Windows
+
 Now that the Linux machine is set up, connect from Windows.
 
 Open Remote Desktop Connection for RDP:
 
-Press Win + R, type mstsc, and press Enter.
-Enter the IP address of the Linux machine (e.g., 192.168.1.10) in the Remote Desktop Connection dialog.
+Press `Win + R`, type `mstsc`, and press Enter.
+Enter the IP address of the Linux machine `10.0.2.10` in the Remote Desktop Connection dialog.
 
 Connect and enter your Linux credentials.
-
-For VNC connections, you’ll need a VNC client (e.g., VNC Viewer or TightVNC).
-Open the VNC client on Windows, enter the IP address with the VNC port (e.g., 192.168.1.10:5900), and connect.
-
 
 ## Setup SERVER device
 
