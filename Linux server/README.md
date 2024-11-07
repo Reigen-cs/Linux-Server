@@ -559,4 +559,5 @@ Edit `/etc/sudoers` to enable logging:
 `Defaults logfile="/var/log/sudo.log"`  
 
 
+![My GIF](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWwxMHd0ODhwdzFsMDd3NXlxM3BkamIwNWZ4NmljZXhkbHJ3OTIzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8UF0EXzsc0Ckg/giphy.gif)
 
