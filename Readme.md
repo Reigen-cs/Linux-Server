@@ -83,11 +83,11 @@ To connect from windows :
 
 ### Step 1 :
 
-`sudo apt install xrdp -y`  - Install the package
-`sudo systemctl start xrdp`  - Start the service
-`sudo systemctl enable xrdp`  - Make it boot when the server boot
-`ip addr show`  - To see our ip
-`sudo ufw allow 3389/tcp` - Allowing this service in our UFW
+`sudo apt install xrdp -y`  - Install the package  
+`sudo systemctl start xrdp`  - Start the service  
+`sudo systemctl enable xrdp`  - Make it boot when the server boot  
+`ip addr show`  - To see our ip  
+`sudo ufw allow 3389/tcp` - Allowing this service in our UFW  
 
 ### Step 2: Connect from Windows
 
