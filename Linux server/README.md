@@ -2,7 +2,12 @@
 
 ## Table of Contents
 - [Creates VM](#creates-vm)
+  - [1) One VM for the client](#1-one-vm-for-the-client)
+  - [2) One VM for the server](#2-one-vm-for-the-server)
+  - [3) Virtualbox](#3-virtualbox)
 - [Setup CLIENT device](#setup-client-device)
+  - [1) Basic software installation](#1-basic-software-installation)
+  - [2) Remote access](#2-remote-access)
 - [Setup SERVER device](#setup-server-device)
   - [1) Create a new user for administration](#1-create-a-new-user-for-administration)
   - [2) Setup a static IP](#2-setup-a-static-ip)
@@ -86,7 +91,7 @@ https://mullvad.net/en/download/browser/linux
 `cd mullvad-browser`  
 `./start-mullvad-browser-desktop --register-app`  
 
-### 2) Remote acces
+### 2) Remote access
 
 2 options SSH and a remote desktop solution:
 
