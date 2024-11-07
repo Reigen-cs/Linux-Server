@@ -58,13 +58,13 @@ Then you do the three lines above.
 - **LibreOffice:**  `sudo apt install libreoffice`
 - **Gimp:** `sudo apt install gimp`
 - **Web-Browser (Mullvad) :** Go on their official website : 
-https://mullvad.net/en/download/browser/linux
-`cd Downloads`
-`tar xf mullvad-browser-linux64-[YOUR_VERSION].tar.xf`
-`rm mullvad-browser-linux64-[YOUR_VERSION].tar.xf`
-`mv mullvad-browser ~/`
-`cd mullvad-browser`
-`./start-mullvad-browser-desktop --register-app`
+https://mullvad.net/en/download/browser/linux  
+`cd Downloads`  
+`tar xf mullvad-browser-linux64-[YOUR_VERSION].tar.xf`  
+`rm mullvad-browser-linux64-[YOUR_VERSION].tar.xf`  
+`mv mullvad-browser ~/`  
+`cd mullvad-browser`  
+`./start-mullvad-browser-desktop --register-app`  
 
 ### 2) Remote acces
 
