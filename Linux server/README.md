@@ -356,37 +356,37 @@ Edit the Samba configuration file:
 
 Add a new shared folder configuration at the end of the file. For example, to share the folder /srv/samba/share:
 
-[share]
+[share]  
 
-`path = /srv/samba/share
-browseable = yes
-writable = yes
-guest ok = no
-valid users = @sambashare`
+`path = /srv/samba/share  
+browseable = yes  
+writable = yes  
+guest ok = no  
+valid users = @sambashare`  
 
 Create the Shared Directory
 
-`sudo mkdir -p /srv/samba/share`
-`sudo chown :sambashare /srv/samba/share`
-`sudo chmod 2770 /srv/samba/share`
+`sudo mkdir -p /srv/samba/share`  
+`sudo chown :sambashare /srv/samba/share`  
+`sudo chmod 2770 /srv/samba/share`  
 
 Set Up Samba Users
 
-`sudo usermod -aG sambashare username`
+`sudo usermod -aG sambashare username`  
 
 Set a Samba password for this user:
 
-`sudo smbpasswd -a username`
+`sudo smbpasswd -a username`  
 
 Restart Samba Services
 
-`sudo systemctl restart smbd`
-`sudo systemctl restart nmbd`
+`sudo systemctl restart smbd`  
+`sudo systemctl restart nmbd`  
 
 Add Samba to the firewall
 
-`sudo ufw allow 'Samba'`
-`sudo ufw reload`
+`sudo ufw allow 'Samba'`  
+`sudo ufw reload`  
 
 Run the following command to verify that the configuration is correct:
 
@@ -400,14 +400,14 @@ Run the following command to verify that the configuration is correct:
   2. Type `\\[server IP]\share` and press Enter.
 
 - **From Linux**:
-  - Using `smbclient`:
-    ```bash
-    smbclient //server_IP/share
-    ```
-  - Or, mount the share using the `mount` command:
-    ```bash
-    sudo mount -t cifs //server_IP/share /path/to/mountpoint -o username=[your_username]
-    ```
+  - Using `smbclient`:  
+    ```bash  
+    smbclient //server_IP/share  
+    ```  
+  - Or, mount the share using the `mount` command:  
+    ```bash  
+    sudo mount -t cifs //server_IP/share /path/to/mountpoint -o username=[your_username]  
+    ```  
 
 - **From macOS**:
   1. Open Finder.
