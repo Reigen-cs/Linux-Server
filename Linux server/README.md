@@ -1,5 +1,14 @@
 # Linux Server
 
+## Table of Contents
+- [Creates VM](#creates-vm)
+- [Setup CLIENT device](#setup-client-device)
+- [Setup SERVER device](#setup-server-device)
+- [SERVER WEB NGINX](#server-web-nginx)
+- [DNS](#dns)
+- [DHCP](#dhcp)
+- [SAMBA](#samba)
+- [SECURING THE SERVER](#securing-the-server)
 
 ## Creates VM
 
