@@ -497,18 +497,20 @@ Enable protection for SSH and adjust ban times as needed.
 
 AIDE (Advanced Intrusion Detection Environment) scans your file system for changes.
 `sudo apt install aide`  
+
 `sudo aideinit`  
+
 `sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db`  
 
 To check for changes:
-`sudo aide --check`  
+`sudo aide --check`    
 
- ###Monitor Logs
+ ### Monitor Logs
 
  Regularly monitor logs to check for suspicious activity. Use tools like logwatch for easier log summaries.
 
-`sudo apt install logwatch  
-sudo logwatch --detail High --mailto your-email@example.com --range today`  
+`sudo apt install logwatch    
+sudo logwatch --detail High --mailto your-email@example.com --range today`   
 
 ### TCP Wrappers
 
