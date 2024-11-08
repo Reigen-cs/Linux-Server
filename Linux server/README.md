@@ -487,7 +487,8 @@ Fail2Ban monitors failed login attempts and blocks IPs with multiple failed atte
 
 To configure it:
 
-`sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local  
+`sudo cp /etc/fail2ban/jail.conf  /etc/fail2ban/jail.local   
+
 sudo nano /etc/fail2ban/jail.local`  
 
 Enable protection for SSH and adjust ban times as needed.
